@@ -19,7 +19,7 @@ services:
   health:
     image: ghcr.io/slntopp/nocloud/health:latest
     restart: always
-    labels:
+    labels: 
       - traefik.http.routers.health.rule=PathPrefix("/nocloud.health.")
       - traefik.http.routers.health.entrypoints=grpc
       - traefik.http.services.health.loadbalancer.server.port=8000
